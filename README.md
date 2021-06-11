@@ -1,2 +1,3 @@
 # sicss_presentation
-Introduction SICSS Brasil
+
+Introduction Lecturer to the SICSS FGV DAPP Brasil

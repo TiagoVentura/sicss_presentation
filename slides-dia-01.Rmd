@@ -20,7 +20,7 @@ xaringanthemer::style_mono_light(base_color ="#23395b",
                                   title_slide_text_color="#23395b", 
                                   title_slide_background_color = "#fbf9f4", 
                                   background_color = "#fbf9f4", 
-                                 link_color =  "#F21A00")
+                                  link_color =  "#F21A00")
 
 ``` 
 
@@ -61,7 +61,7 @@ knitr::include_graphics("https://media.giphy.com/media/OF0yOAufcWLfi/giphy.gif")
 
 - Maior parte doutorandos, porém, temos pósdocs e pesquisadores do terceiro setor. 
 
-- []()
+- [As bios de vocês](https://sicss.io/2021/fgv-dapp-brazil/people)
 
 ---
 
@@ -73,7 +73,7 @@ knitr::include_graphics("https://media.giphy.com/media/OF0yOAufcWLfi/giphy.gif")
 
 - Flipped Classroom
 
-    - **[Vídeos](https://sicss.io/curriculum)** das aulas devem ser assistidos com antecedência. 
+    - **[Vídeos](https://sicss.io/curriculum)** das aulas devem (deviam) ser assistidos com antecedência. 
     
     - Sessões ao vivo serão um misto de trabalhos em grupos e discussões. 
     
@@ -82,6 +82,7 @@ knitr::include_graphics("https://media.giphy.com/media/OF0yOAufcWLfi/giphy.gif")
 ---
 ## Convidados Especiais
 
+.pull-left[
 - Marco Aurélio Ruediger
 
 - Cesar Zucco
@@ -93,20 +94,29 @@ knitr::include_graphics("https://media.giphy.com/media/OF0yOAufcWLfi/giphy.gif")
 - Ernesto Calvo
 
 - Rochelle Therman
+]
 
+.pull-right[
 - Cecília Oliveira
 
 - Cristina Tardáguila
 
 - Natália Leão
 
+- Fernanda Scovino
+
+- Daniel Mariani
+
+- Marcelo Soares
+]
+
 ---
 
 ## Workshops
 
-- A Base dos Dados com Ricardo Dahis.
+- A Base dos Dados com Fernanda Scovnio (21 Junhp).
 
-- Automated Text Analysis with Spacy and LDAviz com Lucas Roberto.
+- Automated Text Analysis with Spacy and LDAviz com Lucas Roberto (16 Junho).
 
 - Auditoria Algorítimica (Hoje) com Daniel Trielli.
 
@@ -114,20 +124,53 @@ knitr::include_graphics("https://media.giphy.com/media/OF0yOAufcWLfi/giphy.gif")
 
 ## O que é Ciência Social Computacional?
 
-<br>
-.center[
+
+
+.pull-left[
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zGG9wPl1C5E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 
+--
+.pull-right[
+
+<br>
+
+- Anything that is cool.
+
+- Readymades + Custommades Data.
+
+- Data Science <-> Social Science.
+
+]
+
+--
 ---
 ## Porquê o SICSS?
-<br>
-.center[
+
+.pull-left[
 <iframe width="560" height="315" src="https://www.youtube.com/embed/K6HzpZMcaQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
+
+--
+
+.pull-right[
+
+- Rare Free Learning Opportunities.
+
+- Grow together and challenge interdisciplinary barriers
+
+- Teach the Teachers.
+
+- Create a diverse community.
+
+]
+
+--
+
 ---
 
 ## Porquê o SICSS Brasil? 
+
 
 --
 
@@ -159,7 +202,7 @@ knitr::include_graphics("why_sicss.png")
 
 - Construir mais redes de comunicação entre ciêntistas sociais computacionais no Brasil. 
 
-- Hub interdisciplinar a partir do  SICSS Brasil.
+- Hub interdisciplinar a partir do SICSS Brasil.
 
 - Agregar alunos-as com experiências e históricos distintos no campo. 
 
@@ -210,38 +253,11 @@ knitr::include_graphics("why_sicss.png")
 
 Depende de você e dos seus coleges continuar a trabalhar nos projetos pós-SICSS. 
 
-Buscaremos financiamento para os projetos iniciados no SICSS DAPP FGV.
+Edital da DAPP: financiamento para os projetos iniciados no SICSS DAPP FGV.
 
 Você pode escolher seus grupos. Facilitaremos a geração de ideias de projeto usando um processo para reunir pessoas em pequenos grupos com base nos interesses mais semelhantes e mais diferentes. 
 
-
 Você poderá então ativar as ideias. Recomendamos grupos de 2 a 6 pessoas. 
-
----
-## Conhecendo vocês
-
-.pull-left[
-
-- Nome e Pronome Preferido. 
-
-- Institução
-
-- Disciplina
-
-
-Faremos em breve uma dinâmica mais longa de apresentações.
-
-]
-
---
-
-.pull-right[
-```{r  echo=FALSE, out.width = "90%"}
-knitr::include_graphics("scott.gif") 
-```
-]
-
---
 
 ---
 
@@ -295,7 +311,7 @@ Quando possível, tenha seu vídeo ativo
 
 ## Aproveitando ao máximo o Slack!
 
-Use o canal #dapp-fgv o quanto quiser para falar com os participantes
+Use o canal #sicss_fgv_dapp o quanto quiser para falar com os participantes
 
 - Você pode criar DMs para conversar com pessoas em atividades em pequenos grupos
 
@@ -305,6 +321,61 @@ Use o canal #dapp-fgv o quanto quiser para falar com os participantes
 
 - Pode criar seus próprios canais conforme desejado
   
-  
-  
+---
+## Feedback
+
+#### Nos contacte sempre que necessário sobre feedback. Sempre há coisas a melhorar. 
+
+- Vamos ter surveys curtos diários para receber feedback.
+
+- Ou use o slack #sicss_fgv_dapp para 
+
+- Você também pode contactar participantes do SICSS de outros locais (#general)
+
+---
+---
+
+## Conhecendo vocês
+
+.pull-left[
+```{r  echo=FALSE, out.width = "90%"}
+knitr::include_graphics("scott.gif") 
+```
+]
+
+
+.pull-right[
+
+- Nome e Pronome Preferido. 
+
+- Instituição
+
+- Disciplina
+
+Faremos em breve uma dinâmica mais longa a seguir de apresentações.
+
+]
+
+---
+
+## [Atividade de Apresentação](https://github.com/compsocialscience/summer-institute/blob/master/2020/materials/day1-intro-ethics/small_group_discussions.md).
+
+Dividam-se em grupos de 4 participantes. 
+
+- Apresentem-se e discutam: "O que é CSS para vocês? Quais estudos exemplares que vem em sua cabeça?" (15 min)
+
+- Retorna e discussão das opiniões com tods (10 min)
+
+Novos grupos de 4 participantes
+
+- Apresentem-se e discutam: "O que vocês esperam do SICSS Brasil?" (15 min)
+
+- Discussão com tods (10 min)
+
+
+
+
+
+
+
 
