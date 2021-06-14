@@ -237,11 +237,13 @@ knitr::include_graphics("why_sicss.png")
   
   - Q&A
   
+**Mesas Redondas**
+
+- CSS na Academia, Industria e Organizações Sociais.
+  
 **Trabalhos em Grupo (22 - 25 Junho)**
 
   - Dividir grupos
-  
-  - Pensar projetos
   
   - Fazer testes e análises iniciais
   
