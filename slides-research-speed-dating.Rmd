@@ -196,7 +196,7 @@ for (i in 1:1000){
 final$diversity_score<-as.character(final$diversity_score)
 final$diversity_score<-as.numeric(final$diversity_score)
 final<-final[order(final$diversity_score, decreasing=TRUE),]
-head(final$names)
+knitr::kable(head(final), format = 'html')
 ```
 ---
 
