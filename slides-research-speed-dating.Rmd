@@ -26,7 +26,7 @@ knitr::include_graphics("better_science.png")
 ```
 
 ---
-## Ciência de Mais Qualidade e Maior Impacto.
+## Ciência de Maior Impacto.
 
 ```{r echo=FALSE, out.width="150%"}
 knitr::include_graphics("tail.png")
@@ -81,20 +81,22 @@ class: center, middle, inverse
 
 2. Cada pessoa coloca "1" nos tópicos do seu interesse. E "0" nos que não lhe interessam (5 min)
 
-3. Encontra clusters de interesses similares de participantes. 
+3. Detectar clusters de interesses similares de participantes. 
 
-4. Encontra clusters mais diversos de participantes. 
+4. Detectar clusters mais diversos de participantes. 
 
 ---
 ## Research Speed Dating
 
-1. Discute projetos com seu cluster de interesses similares (75 min)
+1. Discute projetos com seu cluster de interesses similares (60 min)
 
-2. Discute projetos com seu cluster de interesses diversos (75 min)
+2. Apresenta idéia aos-as participantes no grupão (30 min)
 
-3. Inicia um google dov novo, e cada pessoa coloca seu grupo favorito. 
+3. Discute projetos com seu cluster de interesses diversos (60 min)
 
-4. E neste mesmo google doc vocês colocam em qual grupo querem participar. 
+4. Apresenta idéia aos-as participantes (30 min)
+
+5. Inicia um google doc novo, e cada pessoa coloca seu grupo favorito. 
 
 ---
 ## Planos para a semana
@@ -138,7 +140,7 @@ gs4_deauth()
 #link
 ss <- "https://docs.google.com/spreadsheets/d/1Uoe_dw5ZY54AdLIHWNn4UO-wS2J_4UAc_SGeYa5C2gs/edit?usp=sharing"
 #organizers, change the sheet name to your specific site
-dat <- read_sheet(ss, sheet = "Sample")
+dat <- read_sheet(ss, sheet = "Princeton")
 #clean variable names
 dat <- clean_names(dat)
 dat <- dat %>% filter(name != "SAMPLE STUDENT")
@@ -162,10 +164,10 @@ fit <- hclust(dmatrix, method="ward.D")
 
 # display dendogram
 plot(fit) 
-groups <- cutree(fit, k=5) # cut tree into 5 clusters
+groups <- cutree(fit, k=6) # cut tree into 5 clusters
 
 # draw dendogram with cut points for groups 
-rect.hclust(fit, k=5, border="red")
+rect.hclust(fit, k=6, border="red")
 ```
 ---
 
@@ -200,8 +202,8 @@ head(final, 10)
 
 ## Vamos lá. 
 
-Reúna-se primeiro com seu cluster de interesses semelhantes por 75 minutos. E em seguida com seu cluster de interesses mais diversos (75 min).  O organizador do site criará uma planilha onde as idéias do projeto serão listadas. Ao final de cada período de 75 minutos, um representante do grupo deve escrever o nome do projeto e um brief (descrição de menos de três frases), e apresentar a idéia para todos os participantes. Após o final do exercício, coloque seu nome ao lado do projeto de pesquisa que você mais gostaria de ingressar.
+Reúna-se primeiro com seu cluster de interesses semelhantes por 60 minutos. E em seguida com seu cluster de interesses mais diversos (60 min).  O organizador do site criará uma planilha onde as idéias do projeto serão listadas. Ao final de cada período de 60 minutos, um representante do grupo deve escrever o nome do projeto e um brief (descrição de menos de três frases), e apresentar a idéia para todos os participantes. Após o final do exercício, coloque seu nome ao lado do projeto de pesquisa que você mais gostaria de ingressar.
 
-Clique no link do google doc do seu site aqui: [https://tinyurl.com/SICSSSpeedDating2021](https://tinyurl.com/SICSSSpeedDating2021)
+Clique no link do google doc do seu site aqui: [Lista de Idéias](https://docs.google.com/document/d/19FlGXkPEALTKPEO5i87IjsSxMTb34oVTUlsyeuYnKF0/edit)
 
 
