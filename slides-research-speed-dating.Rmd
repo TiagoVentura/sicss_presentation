@@ -181,6 +181,8 @@ dat$names<-NULL
 library(dplyr)
 library(vegan)
 
+?diversity
+
 for (i in 1:1000){
   test<-sample_n(dat, 4)
   names<-paste(test$name, collapse=",")
@@ -196,7 +198,17 @@ for (i in 1:1000){
 final$diversity_score<-as.character(final$diversity_score)
 final$diversity_score<-as.numeric(final$diversity_score)
 final<-final[order(final$diversity_score, decreasing=TRUE),]
-knitr::kable(head(final), format = 'html')
+data <- tribble(~names, ~groupo, 
+                c( "Tanise", "Luiz Paulo", "Matheus"), 1, 
+                c("Jean", "Marcelo", "Patricia", "Jonas"), 2,
+                c("Beatriz", "Marcus", "Lorena", "Larissa"), 3,
+                c("Nico", "Leonardo", "Gabriel"), 4, 
+                c("Victoria", "Amanda", "Luana", "Fernanda"), 5, 
+                c("Marisa", "Otavio", "Guilherme"), 6)
+
+knitr::kable(data, format = 'html')
+
+
 ```
 ---
 
