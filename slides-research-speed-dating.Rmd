@@ -71,13 +71,27 @@ class: center, middle, inverse
 
 - Em poucos dias, estes projetos podem ser somente desenhos ou idéias. Porém, alguns grupos podem já pensar em iniciar alguns estudos pilotos. 
 
-- A DAPP FGV e o SICSS via o Social Science Research Council ofertarão um programa de financiamento para as pesquisas iniciadas por vocês. Mandaremos após o SICSS mais informações de como aplicar para este financiamento. 
+- A DAPP FGV abrira um edital para financiamento (suporte tecnico, acesso a dados, e financiamento de pesquisa) para as pesquisas iniciadas por vocês. Mandaremos após o SICSS mais informações de como aplicar para este financiamento. 
+
+---
+
+## Lista de alguns projetos finais do SICSS
+
+- [VaryCSS](http://varycss.org/)
+
+- [The Wisdom of Partisan Crowds](https://www.pnas.org/doi/full/10.1073/pnas.1817195116)
+
+- [The Effect of Streaming Chat on Perceptions of Political Debates](https://academic.oup.com/joc/article-abstract/71/6/947/6415947?redirectedFrom=fulltext&login=false)
+
+- [NLP + CSS 201 tutorials](https://nlp-css-201-tutorials.github.io/nlp-css-201-tutorials/)
+
+- [Projetos do ano passado](https://www.ssrc.org/programs/digital-culture/the-summer-institutes-in-computational-social-science/sicss-research-grantees/) e [outros exemplos](https://sicss.io/projects)
 
 ---
 ## Research Speed Dating
 
 
-1. Crowdsource coletivamente uma lista de interesses de pesquisa em um google doc. (5 min)
+1. Crowdsource uma lista de interesses de pesquisa em um google doc. (5 min)
 
 2. Cada pessoa coloca "1" nos tópicos do seu interesse. E "0" nos que não lhe interessam (5 min)
 
@@ -101,11 +115,18 @@ class: center, middle, inverse
 ---
 ## Planos para a semana
 
-- Terça: Research Speed Dating
+- Hoje: Research Speed Dating
 
-- Quarta e Quinta: Trabalhe em seus grupos. 
+- Segunda & terca & quarta: Trabalhe em seus grupos. 
 
-- Sexta: Apresente resultados e idéias iniciais. 
+- Quinta: Apresente resultados e idéias iniciais. 
+
+
+---
+class: center, middle, inverse
+
+## Edital da DAPP
+
 
 ---
 
@@ -181,8 +202,6 @@ dat$names<-NULL
 library(dplyr)
 library(vegan)
 
-?diversity
-
 for (i in 1:1000){
   test<-sample_n(dat, 4)
   names<-paste(test$name, collapse=",")
@@ -198,6 +217,7 @@ for (i in 1:1000){
 final$diversity_score<-as.character(final$diversity_score)
 final$diversity_score<-as.numeric(final$diversity_score)
 final<-final[order(final$diversity_score, decreasing=TRUE),]
+
 data <- tribble(~names, ~groupo, 
                 c( "Tanise", "Luiz Paulo", "Matheus"), 1, 
                 c("Jean", "Marcelo", "Patricia", "Jonas"), 2,
@@ -216,6 +236,7 @@ knitr::kable(data, format = 'html')
 
 Reúna-se primeiro com seu cluster de interesses semelhantes por 60 minutos. E em seguida com seu cluster de interesses mais diversos (60 min).  O organizador do site criará uma planilha onde as idéias do projeto serão listadas. Ao final de cada período de 60 minutos, um representante do grupo deve escrever o nome do projeto e um brief (descrição de menos de três frases), e apresentar a idéia para todos os participantes. Após o final do exercício, coloque seu nome ao lado do projeto de pesquisa que você mais gostaria de ingressar.
 
-Clique no link do google doc do seu site aqui: [Lista de Idéias](https://docs.google.com/document/d/19FlGXkPEALTKPEO5i87IjsSxMTb34oVTUlsyeuYnKF0/edit)
+Clique no link do google doc do seu site aqui: [Lista de Idéias](https://docs.google.com/document/d/19gOzyfJsP64JMYlO_J4CPT-OL2D71uHPrVrfK-KvynI/edit)
+
 
 
