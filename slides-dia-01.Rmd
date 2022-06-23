@@ -76,7 +76,7 @@ knitr::include_graphics("https://media.giphy.com/media/OF0yOAufcWLfi/giphy.gif")
     
     - Sessões ao vivo serão um misto de trabalhos em grupos e discussões. 
     
-    - Aulas gravadas para o dia do Faceboo Ads.
+    - Aulas gravadas para o dia do Facebook Ads.
     
 - Um dia típico do SICSS consistirá em atividades em grupo, discussões e um convidado especial. 
 
