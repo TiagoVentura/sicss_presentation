@@ -12,6 +12,8 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+editor_options: 
+  chunk_output_type: console
 ---
 class: center, middle, inverse
 
@@ -176,7 +178,7 @@ gs4_deauth()
 ss <- "https://docs.google.com/spreadsheets/d/1Uoe_dw5ZY54AdLIHWNn4UO-wS2J_4UAc_SGeYa5C2gs/edit?usp=sharing"
 #organizers, change the sheet name to your specific site
 dat <- read_sheet(ss, sheet = "Brazil")
-
+View(dat)
 #clean variable names
 dat <- clean_names(dat)
 dat <- dat %>% filter(name != "SAMPLE STUDENT")
@@ -184,8 +186,8 @@ dat <- dat %>% filter(name != "SAMPLE STUDENT")
 dat <- dat %>% select(-c(email))
 #replace NAs with 0s
 dat <- dat %>% replace(is.na(.), 0)
-
-#glimpse(dat)
+dat_inv <- dat %>%
+              mutate_at(vars(c(2:47)),~ifelse(.x==1, 0, 1))
 ```
 
 ```{r, eval=TRUE, echo = FALSE}
@@ -193,8 +195,7 @@ dat <- dat %>% replace(is.na(.), 0)
 dat_mat <- as.matrix(dat)
 rownames(dat_mat) <- dat$name
 dat_mat <- dat_mat[,-1]
-dmatrix <- dist(dat_mat, method = "euclidean") 
-
+dmatrix <- dist(dat_mat, method = "euclid") 
 #fit with the hierarchical clustering
 fit <- hclust(dmatrix, method="ward.D") 
 
@@ -204,6 +205,7 @@ groups <- cutree(fit, k=5)
 # cut tree into 5 clusters
 # draw dendogram with cut points for groups 
 rect.hclust(fit, k=5, border="red")
+
 ```
 ---
 
@@ -220,7 +222,7 @@ class:inverse, middle, center
 
 ## Clusters de Interesse Diversos. 
 
-```{r, eval=TRUE, echo = FALSE}
+```{r echo = FALSE}
 #identifying maximally dissimilar
 final<-as.data.frame(NULL)
 dat$names<-NULL
@@ -236,7 +238,7 @@ for (i in 1:1000){
 }
 ```
 
-```{r, eval=TRUE, echo = FALSE, out.width="30%"}
+```{r echo = FALSE, out.width="30%"}
 #organizers, people may be assigned to more than one group 
 #they should choose or you should assign them to one 
 final$diversity_score<-as.character(final$diversity_score)
@@ -244,18 +246,46 @@ final$diversity_score<-as.numeric(final$diversity_score)
 final<-final[order(final$diversity_score, decreasing=TRUE),]
 
 data <- tribble(~names, ~groupo, 
-                c( "Tanise", "Luiz Paulo", "Matheus"), 1, 
-                c("Jean", "Marcelo", "Patricia", "Jonas"), 2,
-                c("Beatriz", "Marcus", "Lorena", "Larissa"), 3,
-                c("Nico", "Leonardo", "Gabriel"), 4, 
-                c("Victoria", "Amanda", "Luana", "Fernanda"), 5, 
-                c("Marisa", "Otavio", "Guilherme"), 6)
+                c( "Alisson", "Alex", "Yago"), 1, 
+                c("Igor", "Rafael", "Yuri"), 2,
+                c("Lucy", "Heloisa", "Natalia", "Priscila"), 3,
+                c("Murilo", "Gustavo", "Alejandra", "Raquel"), 4, 
+                c("Ana Julia", "Virginia", "Gabriel","Victor"), 5, 
+                c("Lucas", "Rodrigo", "Pedro"), 6)
 
 knitr::kable(data, format = 'html')
 
 
 ```
+
+```{r eval=FALSE, echo=FALSE}
+#create distance matrix
+dat_inv <- dat %>%
+              mutate_at(vars(c(2:47)),~ifelse(.x==1, -1, 0))
+
+cbind(dat_inv$nlp_3, dat$nlp_3)
+
+dat_mat <- as.matrix(dat_inv)
+rownames(dat_mat) <- dat_inv$name
+dat_mat <- dat_mat[,-1]
+dmatrix2 <- dist(dat_mat, method = "euclid") 
+dmatrix[1]
+dmatrix2[1]
+
+#fit with the hierarchical clustering
+fit <- hclust(dmatrix2, method="ward.D") 
+dmatrix
+# display dendogram
+plot(fit) 
+groups <- cutree(fit, k=5)
+# cut tree into 5 clusters
+# draw dendogram with cut points for groups 
+rect.hclust(fit, k=5, border="red")
+
+```
 ---
+
+
 
 class:inverse, middle, center
 
